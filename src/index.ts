@@ -11,8 +11,10 @@ app.get(
   cacheMiddleware({
     directives: ["public"],
   }),
-  (c) => {
-    return c.text("Hello Hono!");
+  async (c) => {
+    return c.json({
+      message: "Hello, world!",
+    });
   },
 );
 
