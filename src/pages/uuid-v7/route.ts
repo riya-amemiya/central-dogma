@@ -1,6 +1,6 @@
 import { createRoute } from "@hono/zod-openapi";
 
-import { GetUuidV7Response200Schema } from "./schema.js";
+import { GetUuidV7Response200Schema } from "./schema";
 
 export const uuidV7Route = createRoute({
   method: "get",

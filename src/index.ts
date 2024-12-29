@@ -1,8 +1,8 @@
 import { swaggerUI } from "@hono/swagger-ui";
 import { OpenAPIHono } from "@hono/zod-openapi";
+import { cacheMiddleware } from "@utils/cacheMiddleware";
 
-import { appPages } from "./pages/index.js";
-import { cacheMiddleware } from "./utils/cacheMiddleware.js";
+import { appPages } from "./pages";
 
 const app = new OpenAPIHono();
 
@@ -11,8 +11,10 @@ app.get(
   cacheMiddleware({
     directives: ["public"],
   }),
-  (c) => {
-    return c.text("Hello Hono!");
+  async (c) => {
+    return c.json({
+      message: "Hello, world!",
+    });
   },
 );
 
