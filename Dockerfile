@@ -18,12 +18,9 @@ RUN addgroup --system --gid 1001 nodejs && \
     adduser --system --uid 1001 hono
 
 # ビルド成果物のコピー
-COPY --from=builder --chown=hono:nodejs /app/dist /app/dist
+COPY --from=builder --chown=hono:nodejs /app/src /app/src
 COPY --from=builder --chown=hono:nodejs /app/package.json /app/package.json
 COPY --from=builder --chown=hono:nodejs /app/tsconfig.json /app/tsconfig.json
-
-RUN ls
-RUN ls dist
 
 # 本番依存関係のみをインストール
 RUN bun install --frozen-lockfile --production
@@ -31,4 +28,4 @@ RUN bun install --frozen-lockfile --production
 USER hono
 EXPOSE 3000
 
-CMD ["bun", "run", "/app/dist/index.js"]
+CMD ["bun", "run", "start"]
