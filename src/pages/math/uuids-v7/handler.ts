@@ -5,7 +5,7 @@ import type { uuidsV7Route } from "./route";
 import type { RouteHandler } from "@hono/zod-openapi";
 
 export const uuidsV7Handler: RouteHandler<typeof uuidsV7Route> = async (c) => {
-  const { limit } = c.req.query();
+  const { limit } = c.req.valid("query");
   const length = isNumber(limit) ? Number(limit) : 1;
   if (length < 1) {
     return c.json(

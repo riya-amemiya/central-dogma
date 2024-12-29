@@ -1,7 +1,7 @@
 import { z } from "@hono/zod-openapi";
 
 export const GetUuidsV7RequestQuerySchema = z.object({
-  limit: z.string().optional(),
+  limit: z.string().regex(/^\d+$/).optional(),
 });
 
 export const GetUuidsV7Response200Schema = z.object({
