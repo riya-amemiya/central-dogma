@@ -1,6 +1,6 @@
 import { createRoute } from "@hono/zod-openapi";
 import { cacheMiddleware } from "@utils/cacheMiddleware";
-import { convertTime, OneDayMs } from "umt/module/index";
+import { convertTime, OneDayMs } from "umt/module";
 
 import { GetEndoflifeAngularResponse200Schema } from "./schema";
 
@@ -10,7 +10,7 @@ export const endoflifeAngularRoute = createRoute({
     directives: ["public"],
   }),
   method: "get",
-  path: "/endoflife/angular",
+  path: "/angular",
   responses: {
     200: {
       content: {
