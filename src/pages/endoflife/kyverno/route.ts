@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetKyvernoResponse200Schema } from "./schema";
 
 export const endoflifeKyvernoRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

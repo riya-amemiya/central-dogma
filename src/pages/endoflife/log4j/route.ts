@@ -6,6 +6,7 @@ import { GetLog4jResponse200Schema as GetLog4indexResponse200Schema } from "./sc
 
 // eslint-disable-next-line unicorn/prevent-abbreviations
 export const endoflifeLog4jRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetTomcatResponse200Schema } from "./schema";
 
 export const endoflifeTomcatRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

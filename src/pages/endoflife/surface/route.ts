@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetSurfaceResponse200Schema } from "./schema";
 
 export const endoflifeSurfaceRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

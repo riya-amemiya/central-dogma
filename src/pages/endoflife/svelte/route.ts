@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetSvelteResponse200Schema } from "./schema";
 
 export const endoflifeSvelteRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

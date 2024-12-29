@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetTypo3Response200Schema } from "./schema";
 
 export const endoflifeTypo3Route = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

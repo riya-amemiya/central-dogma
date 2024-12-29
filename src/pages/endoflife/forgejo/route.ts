@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetForgejoResponse200Schema } from "./schema";
 
 export const endoflifeForgejoRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetArtifactoryResponse200Schema } from "./schema";
 
 export const endoflifeArtifactoryRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

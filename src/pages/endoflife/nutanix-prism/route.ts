@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetNutanixPrismResponse200Schema } from "./schema";
 
 export const endoflifeNutanixPrismRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

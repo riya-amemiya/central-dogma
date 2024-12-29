@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetDockerEngineResponse200Schema } from "./schema";
 
 export const endoflifeDockerEngineRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

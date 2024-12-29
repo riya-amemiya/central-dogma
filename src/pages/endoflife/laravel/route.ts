@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetLaravelResponse200Schema } from "./schema";
 
 export const endoflifeLaravelRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

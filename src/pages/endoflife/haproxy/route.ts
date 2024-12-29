@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetHaproxyResponse200Schema } from "./schema";
 
 export const endoflifeHaproxyRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

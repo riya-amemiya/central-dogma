@@ -6,6 +6,7 @@ import { GetNeo4jResponse200Schema as GetNeo4indexResponse200Schema } from "./sc
 
 // eslint-disable-next-line unicorn/prevent-abbreviations
 export const endoflifeNeo4jRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

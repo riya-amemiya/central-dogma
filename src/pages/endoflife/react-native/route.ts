@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetReactNativeResponse200Schema } from "./schema";
 
 export const endoflifeReactNativeRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

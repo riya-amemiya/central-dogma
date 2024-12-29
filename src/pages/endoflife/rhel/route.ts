@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetRhelResponse200Schema } from "./schema";
 
 export const endoflifeRhelRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

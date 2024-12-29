@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetUnityResponse200Schema } from "./schema";
 
 export const endoflifeUnityRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetIntelProcessorsResponse200Schema } from "./schema";
 
 export const endoflifeIntelProcessorsRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

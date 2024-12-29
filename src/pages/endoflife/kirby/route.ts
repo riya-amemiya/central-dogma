@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetKirbyResponse200Schema } from "./schema";
 
 export const endoflifeKirbyRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

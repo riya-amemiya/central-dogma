@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetTwigResponse200Schema } from "./schema";
 
 export const endoflifeTwigRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

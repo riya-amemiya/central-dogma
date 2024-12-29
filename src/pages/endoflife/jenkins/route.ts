@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetJenkinsResponse200Schema } from "./schema";
 
 export const endoflifeJenkinsRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

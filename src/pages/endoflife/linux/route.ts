@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetLinuxResponse200Schema } from "./schema";
 
 export const endoflifeLinuxRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

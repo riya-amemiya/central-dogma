@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetCentosStreamResponse200Schema } from "./schema";
 
 export const endoflifeCentosStreamRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],
