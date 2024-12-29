@@ -1,8 +1,14 @@
 import { createRoute } from "@hono/zod-openapi";
+import { cacheMiddleware } from "@utils/cacheMiddleware";
+import { convertTime, OneDayMs } from "umt/module/index";
 
-import { GetEndoflifeAngularResponse200Schema } from "./schema.js";
+import { GetEndoflifeAngularResponse200Schema } from "./schema";
 
 export const endoflifeAngularRoute = createRoute({
+  middleware: cacheMiddleware({
+    maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
+    directives: ["public"],
+  }),
   method: "get",
   path: "/endoflife/angular",
   responses: {

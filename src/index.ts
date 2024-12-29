@@ -1,8 +1,7 @@
 import { swaggerUI } from "@hono/swagger-ui";
 import { OpenAPIHono } from "@hono/zod-openapi";
-
-import { appPages } from "./pages/index.js";
-import { cacheMiddleware } from "./utils/cacheMiddleware.js";
+import { appPages } from "@pages/index.js";
+import { cacheMiddleware } from "@utils/cacheMiddleware.js";
 
 const app = new OpenAPIHono();
 
