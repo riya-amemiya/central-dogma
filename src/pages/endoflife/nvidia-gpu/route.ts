@@ -1,0 +1,24 @@
+import { createRoute } from "@hono/zod-openapi";
+import { cacheMiddleware } from "@utils/cacheMiddleware";
+import { convertTime, OneDayMs } from "umt/module";
+
+import { GetNvidiaGpuResponse200Schema } from "./schema";
+
+export const endoflifeNvidiaGpuRoute = createRoute({
+  middleware: cacheMiddleware({
+    maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
+    directives: ["public"],
+  }),
+  method: "get",
+  path: "/nvidia-gpu",
+  responses: {
+    200: {
+      content: {
+        "application/json": {
+          schema: GetNvidiaGpuResponse200Schema,
+        },
+      },
+      description: "Get the NvidiaGpu end-of-life information",
+    },
+  },
+});
