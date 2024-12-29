@@ -46,7 +46,7 @@ ${
     ? `import { ${capitalizedMethod}${capitalizedName}RequestSchema,`
     : // biome-ignore lint/style/noUnusedTemplateLiteral: <explanation>
       `import {`
-} ${capitalizedMethod}${capitalizedName}Response200Schema } from "./schema.js";
+} ${capitalizedMethod}${capitalizedName}Response200Schema } from "./schema";
 
 export const ${functionName}Route = createRoute({
   method: "${method}",

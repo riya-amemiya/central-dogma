@@ -4,7 +4,7 @@ import {
   GetUuidsV7RequestQuerySchema,
   GetUuidsV7Response200Schema,
   GetUuidsV7Response400Schema,
-} from "./schema.js";
+} from "./schema";
 
 export const uuidsV7Route = createRoute({
   method: "get",
