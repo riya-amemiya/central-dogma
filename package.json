@@ -8,7 +8,8 @@
     "lint:fix": "bun run eslint --fix && bun run format --write && bun run check --write",
     "lint": "bun run eslint && bun run format && bun run check",
     "build": "tsc",
-    "dev": "bun run --hot src/index.ts"
+    "dev": "bun run --hot src/index.ts",
+    "start": "bun run src/index.ts"
   },
   "dependencies": {
     "@hono/swagger-ui": "^0.5.0",
