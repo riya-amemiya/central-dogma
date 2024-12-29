@@ -22,6 +22,8 @@ COPY --from=builder --chown=hono:nodejs /app/dist /app/dist
 COPY --from=builder --chown=hono:nodejs /app/package.json /app/package.json
 COPY --from=builder --chown=hono:nodejs /app/tsconfig.json /tsconfig.json
 
+RUN ls
+
 # 本番依存関係のみをインストール
 RUN bun install --frozen-lockfile --production
 
