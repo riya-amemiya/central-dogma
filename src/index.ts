@@ -26,6 +26,11 @@ app.doc31("/doc", {
     version: "1.0.0",
     title: "Central Dogma",
   },
+  servers: [
+    {
+      url: "https://central-dogma.oshaburikitchin.com",
+    },
+  ],
 });
 
 app.get("/doc-ui", swaggerUI({ url: "/doc" }));
