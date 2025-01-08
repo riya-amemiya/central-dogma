@@ -1,6 +1,7 @@
 import { swaggerUI } from "@hono/swagger-ui";
 import { OpenAPIHono } from "@hono/zod-openapi";
 import { cacheMiddleware } from "@utils/cacheMiddleware";
+import { convertTime, OneDayMs } from "umt/module";
 
 import { appPages } from "./pages";
 
@@ -9,6 +10,7 @@ const app = new OpenAPIHono();
 app.get(
   "/",
   cacheMiddleware({
+    maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],
   }),
   async (c) => {
