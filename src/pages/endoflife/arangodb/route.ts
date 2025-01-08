@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetArangodbResponse200Schema } from "./schema";
 
 export const endoflifeArangodbRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

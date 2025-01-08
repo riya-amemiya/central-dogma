@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetElectronResponse200Schema } from "./schema";
 
 export const endoflifeElectronRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

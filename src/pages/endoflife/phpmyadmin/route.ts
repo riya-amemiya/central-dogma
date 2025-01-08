@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetPhpmyadminResponse200Schema } from "./schema";
 
 export const endoflifePhpmyadminRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

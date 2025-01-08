@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetNextcloudResponse200Schema } from "./schema";
 
 export const endoflifeNextcloudRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

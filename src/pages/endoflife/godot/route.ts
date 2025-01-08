@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetGodotResponse200Schema } from "./schema";
 
 export const endoflifeGodotRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

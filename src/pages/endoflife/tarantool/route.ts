@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetTarantoolResponse200Schema } from "./schema";
 
 export const endoflifeTarantoolRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetMeilisearchResponse200Schema } from "./schema";
 
 export const endoflifeMeilisearchRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

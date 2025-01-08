@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetMemcachedResponse200Schema } from "./schema";
 
 export const endoflifeMemcachedRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetJoomlaResponse200Schema } from "./schema";
 
 export const endoflifeJoomlaRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

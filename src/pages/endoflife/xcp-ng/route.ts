@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetXcpNgResponse200Schema } from "./schema";
 
 export const endoflifeXcpNgRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

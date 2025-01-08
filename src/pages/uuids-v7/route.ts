@@ -7,6 +7,7 @@ import {
 } from "./schema";
 
 export const uuidsV7Route = createRoute({
+  tags: ["math"],
   method: "get",
   path: "/uuids-v7",
   request: {

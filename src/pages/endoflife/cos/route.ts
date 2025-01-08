@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetCosResponse200Schema } from "./schema";
 
 export const endoflifeCosRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

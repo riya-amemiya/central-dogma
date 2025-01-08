@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetOpensearchResponse200Schema } from "./schema";
 
 export const endoflifeOpensearchRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

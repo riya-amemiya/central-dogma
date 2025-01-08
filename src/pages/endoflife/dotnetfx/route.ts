@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetDotnetfxResponse200Schema } from "./schema";
 
 export const endoflifeDotnetfxRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

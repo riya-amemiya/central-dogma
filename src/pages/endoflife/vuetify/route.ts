@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetVuetifyResponse200Schema } from "./schema";
 
 export const endoflifeVuetifyRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

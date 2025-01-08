@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetFedoraResponse200Schema } from "./schema";
 
 export const endoflifeFedoraRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

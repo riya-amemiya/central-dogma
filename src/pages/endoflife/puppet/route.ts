@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetPuppetResponse200Schema } from "./schema";
 
 export const endoflifePuppetRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

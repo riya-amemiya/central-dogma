@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetOracleJdkResponse200Schema } from "./schema";
 
 export const endoflifeOracleJdkRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

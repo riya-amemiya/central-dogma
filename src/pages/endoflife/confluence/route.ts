@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetConfluenceResponse200Schema } from "./schema";
 
 export const endoflifeConfluenceRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

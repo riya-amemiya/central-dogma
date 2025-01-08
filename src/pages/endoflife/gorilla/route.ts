@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetGorillaResponse200Schema } from "./schema";
 
 export const endoflifeGorillaRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],

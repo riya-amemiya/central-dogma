@@ -5,6 +5,7 @@ import { convertTime, OneDayMs } from "umt/module";
 import { GetScalaResponse200Schema } from "./schema";
 
 export const endoflifeScalaRoute = createRoute({
+  tags: ["endoflife"],
   middleware: cacheMiddleware({
     maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
     directives: ["public"],
