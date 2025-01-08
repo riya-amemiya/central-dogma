@@ -4,25 +4,25 @@ export const GetConvertTimeResponse200Schema = z.object({
 });
 
 export const GetConvertTimeRequestQuerySchema = z.object({
-  value: z.string(),
+  value: z.string().regex(/\d+/),
   fromUnit: z.enum([
     "milliseconds",
     "seconds",
     "minutes",
     "hours",
-    // "ms",
-    // "s",
-    // "m",
-    // "h",
+    "ms",
+    "s",
+    "m",
+    "h",
   ]),
   toUnit: z.enum([
     "milliseconds",
     "seconds",
     "minutes",
     "hours",
-    // "ms",
-    // "s",
-    // "m",
-    // "h",
+    "ms",
+    "s",
+    "m",
+    "h",
   ]),
 });
