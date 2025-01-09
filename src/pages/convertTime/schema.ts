@@ -4,7 +4,7 @@ export const GetConvertTimeResponse200Schema = z.object({
 });
 
 export const GetConvertTimeRequestQuerySchema = z.object({
-  value: z.string().regex(/\d+/),
+  value: z.string().regex(/\d+/, "value must be a number"),
   fromUnit: z.enum([
     "milliseconds",
     "seconds",

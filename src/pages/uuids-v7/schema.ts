@@ -1,7 +1,13 @@
 import { z } from "@hono/zod-openapi";
 
 export const GetUuidsV7RequestQuerySchema = z.object({
-  limit: z.string().optional(),
+  length: z
+    .string()
+    .regex(/\d+/, "length must be a number")
+    .transform(Number)
+    .refine((n) => n > 0, "length must be greater than 0")
+    .refine((n) => n <= 100, "length must be less than or equal to 100")
+    .optional(),
 });
 
 export const GetUuidsV7Response200Schema = z.object({
