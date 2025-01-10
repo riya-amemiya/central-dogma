@@ -7,7 +7,7 @@ import { GetNutanixPrismResponse200Schema } from "./schema";
 export const endoflifeNutanixPrismRoute = createRoute({
   tags: ["endoflife"],
   middleware: cacheMiddleware({
-    maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
+    maxAge: convertTime(OneDayMs, "ms", "s"),
     directives: ["public"],
   }),
   method: "get",

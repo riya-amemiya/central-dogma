@@ -8,7 +8,7 @@ import { GetLog4jResponse200Schema as GetLog4indexResponse200Schema } from "./sc
 export const endoflifeLog4jRoute = createRoute({
   tags: ["endoflife"],
   middleware: cacheMiddleware({
-    maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
+    maxAge: convertTime(OneDayMs, "ms", "s"),
     directives: ["public"],
   }),
   method: "get",

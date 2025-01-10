@@ -7,7 +7,7 @@ import { GetOpenjdkBuildsFromOracleResponse200Schema } from "./schema";
 export const endoflifeOpenjdkBuildsFromOracleRoute = createRoute({
   tags: ["endoflife"],
   middleware: cacheMiddleware({
-    maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
+    maxAge: convertTime(OneDayMs, "ms", "s"),
     directives: ["public"],
   }),
   method: "get",

@@ -10,7 +10,7 @@ import {
 export const convertTimeRoute = createRoute({
   tags: ["time"],
   middleware: cacheMiddleware({
-    maxAge: convertTime(OneYearMs, "milliseconds", "seconds"),
+    maxAge: convertTime(OneYearMs, "ms", "s"),
     directives: ["public"],
   }),
   method: "get",

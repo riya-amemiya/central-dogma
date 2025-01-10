@@ -10,7 +10,7 @@ const app = new OpenAPIHono();
 app.get(
   "/",
   cacheMiddleware({
-    maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
+    maxAge: convertTime(OneDayMs, "ms", "s"),
     directives: ["public"],
   }),
   async (c) => {
@@ -27,7 +27,7 @@ const port = process.env.PORT === undefined ? 3000 : Number(process.env.PORT);
 app.doc31("/doc", (c) => {
   c.header(
     "Cache-Control",
-    `public, max-age=${convertTime(OneDayMs, "milliseconds", "seconds")}`,
+    `public, max-age=${convertTime(OneDayMs, "ms", "s")}`,
   );
   return {
     openapi: "3.1.0",

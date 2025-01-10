@@ -7,7 +7,7 @@ import { GetSurfaceResponse200Schema } from "./schema";
 export const endoflifeSurfaceRoute = createRoute({
   tags: ["endoflife"],
   middleware: cacheMiddleware({
-    maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
+    maxAge: convertTime(OneDayMs, "ms", "s"),
     directives: ["public"],
   }),
   method: "get",

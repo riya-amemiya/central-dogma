@@ -7,7 +7,7 @@ import { GetApacheCamelResponse200Schema } from "./schema";
 export const endoflifeApacheCamelRoute = createRoute({
   tags: ["endoflife"],
   middleware: cacheMiddleware({
-    maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
+    maxAge: convertTime(OneDayMs, "ms", "s"),
     directives: ["public"],
   }),
   method: "get",

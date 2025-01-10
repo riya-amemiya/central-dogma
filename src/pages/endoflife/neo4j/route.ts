@@ -8,7 +8,7 @@ import { GetNeo4jResponse200Schema as GetNeo4indexResponse200Schema } from "./sc
 export const endoflifeNeo4jRoute = createRoute({
   tags: ["endoflife"],
   middleware: cacheMiddleware({
-    maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
+    maxAge: convertTime(OneDayMs, "ms", "s"),
     directives: ["public"],
   }),
   method: "get",

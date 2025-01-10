@@ -7,7 +7,7 @@ import { GetApacheHopResponse200Schema } from "./schema";
 export const endoflifeApacheHopRoute = createRoute({
   tags: ["endoflife"],
   middleware: cacheMiddleware({
-    maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
+    maxAge: convertTime(OneDayMs, "ms", "s"),
     directives: ["public"],
   }),
   method: "get",

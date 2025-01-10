@@ -7,7 +7,7 @@ import { GetVmwareHarborRegistryResponse200Schema } from "./schema";
 export const endoflifeVmwareHarborRegistryRoute = createRoute({
   tags: ["endoflife"],
   middleware: cacheMiddleware({
-    maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
+    maxAge: convertTime(OneDayMs, "ms", "s"),
     directives: ["public"],
   }),
   method: "get",

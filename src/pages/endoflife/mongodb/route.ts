@@ -7,7 +7,7 @@ import { GetMongodbResponse200Schema } from "./schema";
 export const endoflifeMongodbRoute = createRoute({
   tags: ["endoflife"],
   middleware: cacheMiddleware({
-    maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
+    maxAge: convertTime(OneDayMs, "ms", "s"),
     directives: ["public"],
   }),
   method: "get",

@@ -7,7 +7,7 @@ import { GetNvidiaGpuResponse200Schema } from "./schema";
 export const endoflifeNvidiaGpuRoute = createRoute({
   tags: ["endoflife"],
   middleware: cacheMiddleware({
-    maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
+    maxAge: convertTime(OneDayMs, "ms", "s"),
     directives: ["public"],
   }),
   method: "get",

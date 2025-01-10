@@ -7,7 +7,7 @@ import { GetIscDhcpResponse200Schema } from "./schema";
 export const endoflifeIscDhcpRoute = createRoute({
   tags: ["endoflife"],
   middleware: cacheMiddleware({
-    maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
+    maxAge: convertTime(OneDayMs, "ms", "s"),
     directives: ["public"],
   }),
   method: "get",

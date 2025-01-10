@@ -7,7 +7,7 @@ import { GetSourcegraphResponse200Schema } from "./schema";
 export const endoflifeSourcegraphRoute = createRoute({
   tags: ["endoflife"],
   middleware: cacheMiddleware({
-    maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
+    maxAge: convertTime(OneDayMs, "ms", "s"),
     directives: ["public"],
   }),
   method: "get",

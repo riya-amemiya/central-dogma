@@ -7,7 +7,7 @@ import { GetPostmarketosResponse200Schema } from "./schema";
 export const endoflifePostmarketosRoute = createRoute({
   tags: ["endoflife"],
   middleware: cacheMiddleware({
-    maxAge: convertTime(OneDayMs, "milliseconds", "seconds"),
+    maxAge: convertTime(OneDayMs, "ms", "s"),
     directives: ["public"],
   }),
   method: "get",
