@@ -24,13 +24,13 @@ app.route("/", appPages);
 
 const port = process.env.PORT === undefined ? 3000 : Number(process.env.PORT);
 
-app.doc31("/doc", (c) => {
+app.doc("/doc", (c) => {
   c.header(
     "Cache-Control",
     `public, max-age=${convertTime(OneDayMs, "ms", "s")}`,
   );
   return {
-    openapi: "3.1.0",
+    openapi: "3.0.0",
     info: {
       version: "1.0.0",
       title: "Central Dogma",
