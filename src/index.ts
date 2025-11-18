@@ -54,7 +54,7 @@ app.get(
   swaggerUI({ url: "/doc" }),
 );
 
-// biome-ignore lint/style/noDefaultExport: <explanation>
+// biome-ignore lint/style/noDefaultExport: default export is used for bun
 export default {
   port,
   fetch: app.fetch,

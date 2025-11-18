@@ -2,7 +2,7 @@
   "name": "central-dogma",
   "type": "module",
   "scripts": {
-    "eslint": "eslint src",
+    "eslint": "eslint src --cache --cache-strategy content --cache-location node_modules/.cache/eslint/",
     "format": "biome format .",
     "check": "biome check .",
     "lint:fix": "bun run eslint --fix && bun run format --write && bun run check --write",

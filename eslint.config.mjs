@@ -19,10 +19,8 @@ export default [
     ],
   },
   js.configs.recommended,
-  ...compat.extends(
-    "plugin:@typescript-eslint/recommended",
-    "plugin:unicorn/recommended",
-  ),
+  unicornPlugin.configs.recommended,
+  ...compat.extends("plugin:@typescript-eslint/recommended"),
   {
     languageOptions: {
       sourceType: "module",
@@ -33,7 +31,6 @@ export default [
       },
     },
     plugins: {
-      unicorn: unicornPlugin,
       import: importPlugin,
       "@typescript-eslint": typescriptEslintPlugin,
     },

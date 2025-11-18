@@ -44,8 +44,7 @@ const getRouteContent = () => `import { createRoute } from "@hono/zod-openapi";
 ${
   method === "post"
     ? `import { ${capitalizedMethod}${capitalizedName}RequestSchema,`
-    : // biome-ignore lint/style/noUnusedTemplateLiteral: <explanation>
-      `import {`
+    : `import {`
 } ${capitalizedMethod}${capitalizedName}Response200Schema } from "./schema";
 
 export const ${functionName}Route = createRoute({
