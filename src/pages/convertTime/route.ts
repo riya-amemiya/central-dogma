@@ -1,6 +1,6 @@
 import { createRoute } from "@hono/zod-openapi";
 import { cacheMiddleware } from "@utils/cacheMiddleware";
-import { convertTime, OneYearMs } from "umt/module";
+import { convertTime, OneYearMs } from "umt";
 
 import {
   GetConvertTimeRequestQuerySchema,

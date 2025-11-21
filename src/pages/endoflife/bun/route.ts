@@ -1,6 +1,6 @@
 import { createRoute } from "@hono/zod-openapi";
 import { cacheMiddleware } from "@utils/cacheMiddleware";
-import { convertTime, OneDayMs } from "umt/module";
+import { convertTime, OneDayMs } from "umt";
 
 import { GetBunResponse200Schema } from "./schema";
 

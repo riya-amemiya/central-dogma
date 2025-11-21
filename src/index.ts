@@ -1,7 +1,7 @@
 import { swaggerUI } from "@hono/swagger-ui";
 import { OpenAPIHono } from "@hono/zod-openapi";
 import { cacheMiddleware } from "@utils/cacheMiddleware";
-import { convertTime, OneDayMs } from "umt/module";
+import { convertTime, OneDayMs } from "umt";
 
 import { appPages } from "./pages";
 

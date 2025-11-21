@@ -1,4 +1,4 @@
-import { uuidv7 } from "umt/module/Math/uuidv7";
+import { uuidv7 } from "umt";
 
 import type { uuidsV7Route } from "./route";
 import type { RouteHandler } from "@hono/zod-openapi";

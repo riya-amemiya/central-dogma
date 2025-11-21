@@ -1,4 +1,4 @@
-import { convertTime } from "umt/module";
+import { convertTime } from "umt";
 
 import type { convertTimeRoute } from "./route";
 import type { RouteHandler } from "@hono/zod-openapi";
