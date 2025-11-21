@@ -2,7 +2,7 @@ FROM oven/bun:1 AS base
 WORKDIR /app
 
 FROM base AS builder
-COPY package.json bun.lockb tsconfig.json ./
+COPY package.json bun.lock tsconfig.json ./
 COPY src ./src
 
 # 開発依存関係を含めてインストール
