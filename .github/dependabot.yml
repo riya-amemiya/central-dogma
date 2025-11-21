@@ -7,16 +7,16 @@ multi-ecosystem-groups:
   bun-dependencies:
     schedule:
       interval: "weekly"
-  # github-actions-dependencies:
-  #   schedule:
-  #     interval: "weekly"
+  github-actions-dependencies:
+    schedule:
+      interval: "weekly"
 
 updates:
   - package-ecosystem: "bun"
     directory: "/"
     patterns: ["*"]
     multi-ecosystem-group: "bun-dependencies"
-  # - package-ecosystem: "github-actions"
-  #   directory: "/"
-  #   patterns: ["*"]
-  #   multi-ecosystem-group: "github-actions-dependencies"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    patterns: ["*"]
+    multi-ecosystem-group: "github-actions-dependencies"
