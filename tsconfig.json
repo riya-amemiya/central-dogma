@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "ignoreDeprecations": "6.0",
     "noEmit": true,
     "target": "ESNext",
     "module": "ESNext",
@@ -8,7 +9,8 @@
     "verbatimModuleSyntax": true,
     "skipLibCheck": true,
     "types": [
-      "node"
+      "node",
+      "bun-types"
     ],
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx",
