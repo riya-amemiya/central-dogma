@@ -45,6 +45,7 @@ export default [
             camelCase: true,
             pascalCase: true,
           },
+          checkDirectories: false,
         },
       ],
       "unicorn/no-null": "off",
