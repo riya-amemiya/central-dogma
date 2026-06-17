@@ -16,9 +16,9 @@ if (!["get", "post"].includes(method)) {
   process.exit(1);
 }
 
-const functionName = routePath.replaceAll(/-./g, (x) => x.at(1).toUpperCase());
-const capitalizedName = functionName.at(0).toUpperCase() + functionName.slice(1);
-const capitalizedMethod = method.at(0).toUpperCase() + method.slice(1);
+const functionName = routePath.replaceAll(/-./g, (x) => x[1].toUpperCase());
+const capitalizedName = functionName[0].toUpperCase() + functionName.slice(1);
+const capitalizedMethod = method[0].toUpperCase() + method.slice(1);
 
 // スキーマファイルの内容を動的に生成
 const getSchemaContent = () => {
