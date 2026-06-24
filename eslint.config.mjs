@@ -58,6 +58,7 @@ export default [
       "unicorn/max-nested-calls": "off",
       "unicorn/no-top-level-side-effects": "off",
       "unicorn/prefer-at": "off",
+      "unicorn/name-replacements": "off",
       "import/order": [
         "error",
         {
