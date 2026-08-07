@@ -14,15 +14,15 @@
   "dependencies": {
     "@hono/swagger-ui": "0.6.1",
     "@hono/zod-openapi": "1.5.1",
-    "hono": "4.12.32",
+    "hono": "4.12.33",
     "umt": "5.0.0",
     "zod": "4.4.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.5",
+    "@biomejs/biome": "2.5.6",
     "@eslint/eslintrc": "^3.3.6",
     "@eslint/js": "^10.0.1",
-    "@swc/core": "1.15.46",
+    "@swc/core": "1.15.47",
     "@swc/jest": "0.2.39",
     "@types/jest": "30.0.0",
     "@typescript-eslint/eslint-plugin": "8.65.0",
