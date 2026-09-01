@@ -4,7 +4,7 @@
     "noEmit": true,
     "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "strict": true,
     "verbatimModuleSyntax": true,
     "skipLibCheck": true,
@@ -16,13 +16,12 @@
     "jsxImportSource": "hono/jsx",
     "outDir": "dist",
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "./src",
     "paths": {
       "@pages/*": [
-        "./pages/*"
+        "./src/pages/*"
       ],
       "@utils/*": [
-        "./utils/*"
+        "./src/utils/*"
       ]
     },
   }
