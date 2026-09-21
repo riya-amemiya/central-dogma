@@ -13,28 +13,28 @@
   },
   "dependencies": {
     "@hono/swagger-ui": "0.6.1",
-    "@hono/zod-openapi": "1.6.1",
-    "hono": "4.13.5",
+    "@hono/zod-openapi": "1.6.3",
+    "hono": "4.13.8",
     "umt": "5.0.0",
-    "zod": "4.4.3"
+    "zod": "4.6.5"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.11",
-    "@eslint/eslintrc": "^3.3.6",
+    "@biomejs/biome": "2.5.14",
+    "@eslint/eslintrc": "^3.3.7",
     "@eslint/js": "^10.0.1",
-    "@swc/core": "1.16.1",
+    "@swc/core": "1.16.2",
     "@swc/jest": "0.2.39",
     "@types/jest": "30.0.0",
-    "@typescript-eslint/eslint-plugin": "8.68.0",
-    "@typescript-eslint/parser": "8.68.0",
+    "@typescript-eslint/eslint-plugin": "8.70.0",
+    "@typescript-eslint/parser": "8.70.0",
     "@typescript/native": "npm:typescript@7.0.2",
-    "bun-types": "1.4.0",
-    "eslint": "10.9.1",
+    "bun-types": "1.4.2",
+    "eslint": "10.10.0",
     "eslint-plugin-import": "2.32.0",
-    "eslint-plugin-unicorn": "73.0.0",
-    "jest": "30.5.0",
+    "eslint-plugin-unicorn": "75.0.0",
+    "jest": "30.5.2",
     "ts-node": "10.9.2",
-    "tsx": "4.23.12",
+    "tsx": "4.23.13",
     "typescript": "npm:@typescript/typescript6@6.0.2"
   }
 }
