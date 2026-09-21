@@ -1,6 +1,5 @@
 import { z } from "@hono/zod-openapi";
 
-// eslint-disable-next-line unicorn/prevent-abbreviations
 export const GetNeo4jResponse200Schema = z.array(
   z.object({
     cycle: z.string(),
