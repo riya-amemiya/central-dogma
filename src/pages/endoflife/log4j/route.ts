@@ -4,7 +4,6 @@ import { convertTime, OneDayMs } from "umt";
 
 import { GetLog4jResponse200Schema as GetLog4indexResponse200Schema } from "./schema";
 
-// eslint-disable-next-line unicorn/prevent-abbreviations
 export const endoflifeLog4jRoute = createRoute({
   tags: ["endoflife"],
   middleware: cacheMiddleware({

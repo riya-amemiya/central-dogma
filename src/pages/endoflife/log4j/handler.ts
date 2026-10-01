@@ -3,7 +3,6 @@ import type { GetLog4jResponse200Schema as GetLog4indexResponse200Schema } from 
 import type { RouteHandler } from "@hono/zod-openapi";
 import type { z } from "@hono/zod-openapi";
 
-// eslint-disable-next-line unicorn/prevent-abbreviations
 export const endoflifeLog4jHandler: RouteHandler<
   typeof endoflifeLog4indexRoute
 > = async (c) => {

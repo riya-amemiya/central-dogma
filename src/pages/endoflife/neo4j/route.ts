@@ -4,7 +4,6 @@ import { convertTime, OneDayMs } from "umt";
 
 import { GetNeo4jResponse200Schema as GetNeo4indexResponse200Schema } from "./schema";
 
-// eslint-disable-next-line unicorn/prevent-abbreviations
 export const endoflifeNeo4jRoute = createRoute({
   tags: ["endoflife"],
   middleware: cacheMiddleware({

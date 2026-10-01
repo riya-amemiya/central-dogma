@@ -5,18 +5,17 @@ import type { RouteHandler } from "@hono/zod-openapi";
 
 export const uuidsV7Handler: RouteHandler<typeof uuidsV7Route> = async (c) => {
   const { length } = c.req.valid("query");
-  if (!length) {
-    return c.json(
-      {
-        error: "length is required",
-      },
-      400,
-    );
-  }
-  return c.json(
-    {
-      uuids: Array.from({ length }, () => uuidv7()),
-    },
-    200,
-  );
+  return length
+    ? c.json(
+        {
+          uuids: Array.from({ length }, () => uuidv7()),
+        },
+        200,
+      )
+    : c.json(
+        {
+          error: "length is required",
+        },
+        400,
+      );
 };

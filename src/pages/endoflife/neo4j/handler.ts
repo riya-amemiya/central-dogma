@@ -3,7 +3,6 @@ import type { GetNeo4jResponse200Schema as GetNeo4indexResponse200Schema } from 
 import type { RouteHandler } from "@hono/zod-openapi";
 import type { z } from "@hono/zod-openapi";
 
-// eslint-disable-next-line unicorn/prevent-abbreviations
 export const endoflifeNeo4jHandler: RouteHandler<
   typeof endoflifeNeo4indexRoute
 > = async (c) => {

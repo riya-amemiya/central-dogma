@@ -33,23 +33,21 @@ export const cacheMiddleware = (
       staleIfError,
     } = options;
 
-    const parts: string[] = [...directives];
-
-    if (maxAge !== undefined && maxAge >= 0) {
-      parts.push(`max-age=${Math.floor(maxAge)}`);
-    }
-
-    if (sMaxAge !== undefined && sMaxAge >= 0) {
-      parts.push(`s-maxage=${Math.floor(sMaxAge)}`);
-    }
-
-    if (staleWhileRevalidate !== undefined && staleWhileRevalidate >= 0) {
-      parts.push(`stale-while-revalidate=${Math.floor(staleWhileRevalidate)}`);
-    }
-
-    if (staleIfError !== undefined && staleIfError >= 0) {
-      parts.push(`stale-if-error=${Math.floor(staleIfError)}`);
-    }
+    const parts: string[] = [
+      ...directives,
+      ...(maxAge !== undefined && maxAge >= 0
+        ? [`max-age=${Math.floor(maxAge)}`]
+        : []),
+      ...(sMaxAge !== undefined && sMaxAge >= 0
+        ? [`s-maxage=${Math.floor(sMaxAge)}`]
+        : []),
+      ...(staleWhileRevalidate !== undefined && staleWhileRevalidate >= 0
+        ? [`stale-while-revalidate=${Math.floor(staleWhileRevalidate)}`]
+        : []),
+      ...(staleIfError !== undefined && staleIfError >= 0
+        ? [`stale-if-error=${Math.floor(staleIfError)}`]
+        : []),
+    ];
 
     if (parts.length > 0) {
       c.header("Cache-Control", parts.join(", "));
